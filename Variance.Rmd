@@ -1,0 +1,38 @@
+---
+title: "Variance"
+output:
+  tufte::tufte_handout:
+    toc: yes
+    toc_depth: 1
+  tufte::tufte_html:
+    toc: yes
+    toc_depth: 1
+---
+
+#Measuring Variability
+
+We will use the chimpanzee dataset that was introduced in section 2.6. Please review that section if you need to refresh your understanding of how to import this dataset into R.  
+
+Variance is a measure of spread of the data, and is calculated in R as follows:  
+
+```{r eval=FALSE}
+var(chimp$Population)
+```
+
+Standard deviation is just the square root of variance (how much the values typically vary from the average value), and is calculated in R as follows:
+
+```{r eval=FALSE}
+sd(chimp$Population)
+```
+
+#Outliers and Variance
+
+
+\newpage
+
+#Problems
+
+1. Import the Lion and Black Rhino files into R that we were using in the last assignment (‘lionCrater.csv’ and ‘blackRhinoCrater.csv’).  
+\vspace*{1\baselineskip}
+2. What is the variance and standard deviation of population size for black rhinos?  
+

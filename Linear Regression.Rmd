@@ -1,0 +1,53 @@
+---
+title: "Linear Regression"
+output:
+  tufte::tufte_handout:
+    toc: yes
+    toc_depth: 1
+  tufte::tufte_html:
+    toc: yes
+    toc_depth: 1
+---
+
+#Linear Regression
+
+The goal of Linear Regression is to model a linear relationship between an independent (X) and a dependent (Y) variable. If we know the petal width can we estimate the petal length? (The iris dataset is installed as part of the base R installation and can therefore be referenced directly, as in the sample code for this section.)  
+\vspace*{1\baselineskip}
+First, fit a linear model.  
+
+```{r}
+model <- lm(iris$Petal.Length ~ iris$Petal.Width)
+```
+
+Summarize the model.
+
+```{r}
+summary(model)
+```
+
+So, our predictive equation is:  
+Petal Length = 1.08356 + 2.22994(Petal Width)  
+\vspace*{1\baselineskip}
+These results tell us that:  
+
+* the intercept is significantly different than 0 (P<0.05)
+* the slope is significantly different than 0 (P <0.05)
+* the model is a good fit for the data (R 2 = 0.9271). This means that 93% of the variation in petal length is explained by the petal width.  
+
+We can also add a linear regression line directly in the plot of the two variables:
+
+```{r  fig.width = 4, fig.height = 3, fig.fullwidth = TRUE}
+#par(mar=(c(5,4,4,2)))
+plot(iris$Petal.Width, iris$Petal.Length, main = "Petal Width vs. Length", xlab =
+"Petal Width", ylab = "Petal Length")
+abline(model)
+```
+
+
+
+
+
+
+
+
+
