@@ -12,13 +12,13 @@ output:
 #R Packages and Libraries
 
 The functions in R are organized in packages or libraries. The commonly used packages are preinstalled within R. However, if you need to use more specialized packages, you will need to install and then load the package before you can use functions available in that package.  
-\vspace*{1\baselineskip}
-Packages are installed and loaded in the Packages tab in the bottom right corner or through the dropdown menu at the top of the screen (Tools -&gt; Install Packages).  
-\vspace*{1\baselineskip}
+
+Packages are installed and loaded in the Packages tab in the bottom right corner or through the dropdown menu at the top of the screen (Tools -> Install Packages).  
+
 If a package is already installed on your computer, it will be listed in this tab. To load this package so you can use it, hit the checkmark next to the name of the package.  
-\vspace*{1\baselineskip}
+
 If a package is not installed, click the ‘Install’ button at the top of the tab, type in the name of the package, and click ‘Install’. Once it has been installed click the checkmark next to the name to load it.  
-\vspace*{1\baselineskip}
+
 Installed packages can also be loaded from the command line or within a script using the library function.  
 ```{r eval=FALSE}
 library(popbio) #load previously installed package 'popbio'
@@ -54,12 +54,12 @@ For a text file:
 data <- read.table(“data.txt”, header = TRUE, sep=” ”)
 ```
 
-The first argument is the file name (found within the working directory set earlier).
-\vspace*{1\baselineskip}
-The second argument, header, refers to whether or not the column names are listed in the first line of the file, TRUE is used for yes, FALSE for no.
-\vspace*{1\baselineskip}
-The third argument, sep, refers to what is separating the values. A CSV uses commas, but a text document could use semicolons, colons, etc.
-\vspace*{1\baselineskip}
+The first argument is the file name (found within the working directory set earlier).  
+
+The second argument, header, refers to whether or not the column names are listed in the first line of the file, TRUE is used for yes, FALSE for no.  
+
+The third argument, sep, refers to what is separating the values. A CSV uses commas, but a text document could use semicolons, colons, etc.  
+
 Import the chimpanzee dataset into R using either of the two methods explained above. Make sure to save it as a csv file in Excel before importing it into R. When you import it into R, name the variable containing the data ‘chimp’ and ‘. We will use it later! You can view the data after it is imported in R by using the command View, or by double clicking the file in the Environment tab. This dataset gives the population number of chimpanzees in Gombe National Park, Tanzania from 1964-1973.
 
 #Matrices and Data Frames
@@ -131,9 +131,9 @@ length(Loblolly$height) # number of data points in that column
 #Subsetting Data
 
 Sometimes if we have a large dataset for multiple categories, we might want to subset it into smaller datasets for analysis.  
-\vspace*{1\baselineskip}
+
 For example, lets look at the Loblolly dataset, which gives us information on the height and age of loblolly pine trees from different seeds.  
-\vspace*{1\baselineskip}
+
 We can create separate datasets for each of the seeds.  
 
 
@@ -154,9 +154,9 @@ Loblolly2 <- subset(Loblolly, Loblolly$age < 5)
 #Merging Data Frames
 
 Sometimes you need to merge two dataframes, using a variable (column) that is shared between them. In this example, we first create two dataframes from a couple Gapminder .csv files.  
-\vspace*{1\baselineskip}
+
 As it is easier to load data into R when it is in .csv format, I download the Gapminder Excel files, open them, and then ‘save as’ to a .csv format. With these two files, I also renamed the first column to ‘country’ as Gapminder used a different name.  
-\vspace*{1\baselineskip}
+
 Set the working directory as the files are staged there.
 
 ```{r eval=FALSE}
