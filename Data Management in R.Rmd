@@ -17,7 +17,7 @@ Packages are installed and loaded in the Packages tab in the bottom right corner
 
 If a package is already installed on your computer, it will be listed in this tab. To load this package so you can use it, hit the checkmark next to the name of the package.  
 
-If a package is not installed, click the ‘Install’ button at the top of the tab, type in the name of the package, and click ‘Install’. Once it has been installed click the checkmark next to the name to load it.  
+If a package is not installed, click the 'Install' button at the top of the tab, type in the name of the package, and click 'Install'. Once it has been installed click the checkmark next to the name to load it.  
 
 Installed packages can also be loaded from the command line or within a script using the library function.  
 ```{r eval=FALSE}
@@ -29,13 +29,13 @@ http://cran.r-project.org/web/packages/available_packages_by_name.html
 
 #Importing CSV and TXT files
 
-R can import data stored in a wide variety of file types (including Excel files), but the file type you’ll probably encounter most frequently has a .csv or .txt extension. The .csv extension stands for “comma-separated values.”`r tufte::margin_note("A CSV file is recommended for use in R.")` A .txt file, on the other hand, is a simple text file created with a program like Notepad. Instead of commas, text files often use hidden characters, the tab and newline characters for example, to separate values.
+R can import data stored in a wide variety of file types (including Excel files), but the file type you'll probably encounter most frequently has a .csv or .txt extension. The .csv extension stands for “comma-separated values.”`r tufte::margin_note("A CSV file is recommended for use in R.")` A .txt file, on the other hand, is a simple text file created with a program like Notepad. Instead of commas, text files often use hidden characters, the tab and newline characters for example, to separate values.
 
 ##Using the Environment tab
 
-1. In the Environment tab, in the top right corner click on ‘Import Dataset’, and then ‘From Text File…’.
+1. In the Environment tab, in the top right corner click on 'Import Dataset', and then 'From Text File…'.
 2. Choose the file that you want to import.
-3. Choose a name for the data – enter into the ‘Name’ blank. (This name cannot contain any spaces)
+3. Choose a name for the data – enter into the 'Name' blank. (This name cannot contain any spaces)
 4. Choose yes or no depending on whether or not the file has a Heading (column names)
 5. Choose the separator, decimal, quote, and na.strings depending on your data
 6. Click import  
@@ -60,7 +60,7 @@ The second argument, header, refers to whether or not the column names are liste
 
 The third argument, sep, refers to what is separating the values. A CSV uses commas, but a text document could use semicolons, colons, etc.  
 
-Import the chimpanzee dataset into R using either of the two methods explained above. Make sure to save it as a csv file in Excel before importing it into R. When you import it into R, name the variable containing the data ‘chimp’ and ‘. We will use it later! You can view the data after it is imported in R by using the command View, or by double clicking the file in the Environment tab. This dataset gives the population number of chimpanzees in Gombe National Park, Tanzania from 1964-1973.
+Import the chimpanzee dataset into R using either of the two methods explained above. Make sure to save it as a csv file in Excel before importing it into R. When you import it into R, name the variable containing the data 'chimp' and '. We will use it later! You can view the data after it is imported in R by using the command View, or by double clicking the file in the Environment tab. This dataset gives the population number of chimpanzees in Gombe National Park, Tanzania from 1964-1973.
 
 #Matrices and Data Frames
 
@@ -155,7 +155,7 @@ Loblolly2 <- subset(Loblolly, Loblolly$age < 5)
 
 Sometimes you need to merge two dataframes, using a variable (column) that is shared between them. In this example, we first create two dataframes from a couple Gapminder .csv files.  
 
-As it is easier to load data into R when it is in .csv format, I download the Gapminder Excel files, open them, and then ‘save as’ to a .csv format. With these two files, I also renamed the first column to ‘country’ as Gapminder used a different name.  
+As it is easier to load data into R when it is in .csv format, I download the Gapminder Excel files, open them, and then 'save as' to a .csv format. With these two files, I also renamed the first column to 'country' as Gapminder used a different name.  
 
 Set the working directory as the files are staged there.
 
@@ -170,7 +170,7 @@ child_deaths <- read.csv(file = "childDeaths.csv", header = TRUE, stringsAsFacto
 income_person <- read.csv(file = "incomePerson.csv", header = TRUE, stringsAsFactors = FALSE)
 ```
 
-Create two new dataframes with just the country and 2007 (death &amp; income) variables. (The original dataframes contain a lot of additional information we don&#39;t need.) Note: R appends an ‘X’ to numeric column names so the 2007 column in both files loads as ‘X2007’. Naming restrictions apply to variable (column) names – hence, the reason for this behavior.
+Create two new dataframes with just the country and 2007 (death &amp; income) variables. (The original dataframes contain a lot of additional information we don&#39;t need.) Note: R appends an 'X' to numeric column names so the 2007 column in both files loads as 'X2007'. Naming restrictions apply to variable (column) names – hence, the reason for this behavior.
 
 ```{r eval=FALSE}
 deaths_2007 <- data.frame(child_deaths$country, child_deaths$X2007, stringsAsFactors = FALSE)
@@ -193,9 +193,9 @@ income_deaths <- merge(deaths_2007, income_2007, by = "country")
 \newpage
 #PROBLEMS
 
-19. Import the ‘lionCrater’ file into R and save the dataframe as "Lion". This file gives the population numbers for lions in the Ngorongoro Crater in Tanzania.  
+19. Import the 'lionCrater' file into R and save the dataframe as "Lion". This file gives the population numbers for lions in the Ngorongoro Crater in Tanzania.  
 \vspace*{1\baselineskip}
-20. Import the ‘blackRhinoCrater’ file into R and save the dataframe as “Rhino”. This file gives the population numbers for black rhinos in the Ngorongoro Crater in Tanzania.  
+20. Import the 'blackRhinoCrater' file into R and save the dataframe as “Rhino”. This file gives the population numbers for black rhinos in the Ngorongoro Crater in Tanzania.  
 \vspace*{1\baselineskip}
 21. Display the structure of the Lion data frame. What is included? How many observations and how many variables? What are the variable names?  
 \vspace*{1\baselineskip}
