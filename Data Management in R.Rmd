@@ -51,7 +51,7 @@ data <- read.csv("data.csv", header=TRUE)
 
 For a text file:
 ```{r eval=FALSE}
-data <- read.table(“data.txt”, header = TRUE, sep=” ”)
+data <- read.table("data.txt", header = TRUE, sep=" ")
 ```
 
 The first argument is the file name (found within the working directory set earlier).  
