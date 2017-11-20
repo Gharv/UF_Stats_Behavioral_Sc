@@ -1,0 +1,103 @@
+---
+title: "Central Tend Questions"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+lion <- read.csv("https://raw.githubusercontent.com/Gharv/Questions/master/lionCrater.csv")
+rhino <- read.csv("https://raw.githubusercontent.com/Gharv/Questions/master/blackRhinoCrater.csv")
+```
+
+
+## Max & Min
+
+*The lionCrater.csv and blackRhinoCrater.csv files have already been imported and saved with the names **lion** and **rhino** respectively*
+
+Use the interactive code block below to answer the following questions:
+
+```{r max, exercise=TRUE}
+
+```
+
+### Questions
+
+
+```{r max, quiz}
+quiz(
+  question("What is the minimum and maximum population size for lions?",
+    answer("1963 & 1992"),
+    answer("72.50 & 69.20"),
+    answer("12.00 & 123.00", correct = TRUE),
+    answer("52.25 & 88.75")
+  ),
+  question("What is the minimum and maximum population size for black rhinos?",
+    answer("1980 & 1995"),
+    answer("11.00 & 16.00"),
+    answer("10.00 & 21.00", correct = TRUE),
+    answer("14.00 & 14.12")
+  )
+)
+```
+
+
+## Mean, Median & Standard Deviation
+
+
+*The lionCrater.csv and blackRhinoCrater.csv files have already been imported and saved with the names **lion** and **rhino** respectively*
+
+Use the interactive code block below to answer the following questions:
+
+```{r mean, exercise=TRUE}
+
+```
+
+### Questions
+
+```{r mean, quiz}
+quiz(
+  question("Which ones are the mean, median, and standard deviation of the population size of lions?",
+    answer("69.20", correct = TRUE),
+    answer("14.00"),
+    answer("123.00"),
+    answer("72.50", correct = TRUE),
+    answer("27.81", correct = TRUE)
+  ),
+  question("Check the mean and median of the population size for black rhinos.",
+    answer("1988"),
+    answer("21.00"),
+    answer("14.00", correct = TRUE),
+    answer("69.20"),
+    answer("14.12", correct = TRUE)
+  )
+)
+```
+
+
+## Quantiles 
+
+*The lionCrater.csv and blackRhinoCrater.csv files have already been imported and saved with the names **lion** and **rhino** respectively*
+
+Use the interactive code block below to answer the following questions:
+
+```{r quantile, exercise=TRUE}
+
+```
+
+### Questions
+
+```{r quantile, quiz}
+quiz(
+  question("Which are the quantile (0%,25%,50%,75%,100%) population sizes for black rhinos?",
+    answer("10.00", correct = TRUE),
+    answer("11.00", correct = TRUE),
+    answer("14.00", correct = TRUE),
+    answer("14.12"),
+    answer("16.00", correct = TRUE),
+    answer("21.00", correct = TRUE)
+  )
+)
+```
+
