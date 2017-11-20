@@ -8,9 +8,6 @@ output:
     toc: yes
     toc_depth: 1
 ---
-NOTES: DONT HAVE CHIMP DATA AND ISSUE WITH LAST GRAPH, WAS WORKING BEFORE NOT SURE WHAT I CHANGED.
-
-
 #Creating Graphs
 
 ##Basic Plot
@@ -19,7 +16,8 @@ We will plot the chimpanzee and lion population numbers.
 \vspace*{1\baselineskip}
 Creates a plot with years on the x-axis and chimpanzee population size on the y-axis.
 
-```{r eval=FALSE}
+```{r}
+chimp <- read.csv("chimpanzee.csv")
 plot(chimp$Year, chimp$Population)
 ```
 
@@ -46,7 +44,7 @@ Now, let’s us work on customizing our plot. There are many more arguments that
 
 Let’s add these arguments to our chimpanzee plot. Let’s now make a line plot, instead of a point plot – add a title and axis labels – and change the color to blue.
 
-```{r eval=FALSE}
+```{r}
 plot(chimp$Year, chimp$Population, type = "l", main = "Chimpanzee Population in Gombe National Park", xlab = "Year", ylab = "Population", col = "blue")
 ```
 

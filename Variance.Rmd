@@ -32,7 +32,7 @@ sd(chimp$Population)
 
 #Problems
 
-1. Import the Lion and Black Rhino files into R that we were using in the last assignment (‘lionCrater.csv’ and ‘blackRhinoCrater.csv’).  
+1. Import the Lion and Black Rhino files into R that we were using in the last assignment ('lionCrater.csv' and 'blackRhinoCrater.csv').  
 \vspace*{1\baselineskip}
 2. What is the variance and standard deviation of population size for black rhinos?  
 

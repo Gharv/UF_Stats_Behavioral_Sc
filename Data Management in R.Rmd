@@ -170,14 +170,14 @@ child_deaths <- read.csv(file = "childDeaths.csv", header = TRUE, stringsAsFacto
 income_person <- read.csv(file = "incomePerson.csv", header = TRUE, stringsAsFactors = FALSE)
 ```
 
-Create two new dataframes with just the country and 2007 (death &amp; income) variables. (The original dataframes contain a lot of additional information we don&#39;t need.) Note: R appends an 'X' to numeric column names so the 2007 column in both files loads as 'X2007'. Naming restrictions apply to variable (column) names - hence, the reason for this behavior.
+Create two new dataframes with just the country and 2007 (death & income) variables. (The original dataframes contain a lot of additional information we don't need.) Note: R appends an 'X' to numeric column names so the 2007 column in both files loads as 'X2007'. Naming restrictions apply to variable (column) names - hence, the reason for this behavior.
 
 ```{r eval=FALSE}
 deaths_2007 <- data.frame(child_deaths$country, child_deaths$X2007, stringsAsFactors = FALSE)
 income_2007 <- data.frame(income_person$country, income_person$X2007, stringsAsFactors = FALSE) 
 ```
 
-Assign names to our columns. We&#39;ll join the dataframes by country so these two variables must have the exact same name and case. (I always use lowercase for variable names.)
+Assign names to our columns. We'll join the dataframes by country so these two variables must have the exact same name and case. (I always use lowercase for variable names.)
 
 ```{r eval=FALSE}
 colnames(deaths_2007) <- c("country", "deaths_2007")

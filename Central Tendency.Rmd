@@ -8,55 +8,52 @@ output:
     toc: yes
     toc_depth: 1
 ---
-NOTES: DONT HAVE CHIMP DATA
-
-
 #Descriptive Statistics
 
 We will use the chimpanzee dataset that we imported earlier to explore basic descriptive statistics. But first, we need to look at the structure of the dataset.  
 
-```{r eval=FALSE}
+```{r}
 str(chimp)
 ```
 
-This dataset has two variables, Year and Population. Let’s explore the Population variable.  
+This dataset has two variables, Year and Population. Let's explore the Population variable.  
 
-```{r eval=FALSE}
+```{r}
 chimp$Population #display the data in the Population column
 ```
 
 Minimum – smallest value  
-```{r eval=FALSE}
+```{r}
 min(chimp$Population)
 ```
 
 Maximum – largest value
-```{r eval=FALSE}
+```{r}
 max(chimp$Population)
 ```
 
 Range (Minimum and Maximum)
-```{r eval=FALSE}
+```{r}
 range(chimp$Population)
 ```
 
 Median – middle number when all of the values are organized from smallest to largest
-```{r eval=FALSE}
+```{r}
 median(chimp$Population)
 ```
 
 Quantile
-```{r eval=FALSE}
+```{r}
 quantile(chimp$Population)
 ```
 
 Mean is a measure of central tendency of the data, and the code to calculate it in R is as follows:  
-```{r eval=FALSE}
+```{r}
 mean(chimp$Population)
 ```
 
 The summary command calculates a group of the descriptive statistics all at once.
-```{r eval=FALSE}
+```{r}
 summary(chimp$Population)
 ```
 
@@ -73,14 +70,14 @@ mean(a)
 mean(a, na.rm = TRUE)
 ```
 
-Next, let’s us see how to deal with missing data in a real dataset. Let us import the ‘lion’ dataset. This dataset has the population number of lions in the Serengeti Plains from 1966-1990.  
-First import the dataset and name it ‘lion’.
+Next, let's us see how to deal with missing data in a real dataset. Let us import the 'lion' dataset. This dataset has the population number of lions in the Serengeti Plains from 1966-1990.  
+First import the dataset and name it 'lion'.
 
 ```{r}
 lion <- read.csv("lion.csv", header = T)
 ```
 
-If you look at the data, you’ll see that there are no population sizes for the years 1969-1973.  
+If you look at the data, you'll see that there are no population sizes for the years 1969-1973.  
 Now, what happens if we try to find the mean of the population size?
 
 ```{r}
@@ -93,7 +90,7 @@ We can use the trick we just learned to get the mean population size.
 mean(lion$Population, na.rm = TRUE)
 ```
 
-However, instead of having to include the ’na.rm’ argument every time, we can just delete the rows that are missing data.
+However, instead of having to include the 'na.rm' argument every time, we can just delete the rows that are missing data.
 
 ```{r}
 lion2 <- na.omit(lion)
@@ -103,7 +100,7 @@ lion2 <- na.omit(lion)
 
 #Problems
 
-1. Import the Lion and Black Rhino files into R that were used in previous assignments (‘lionCrater.csv’ and ‘blackRhinoCrater.csv’).  
+1. Import the Lion and Black Rhino files into R that were used in previous assignments ('lionCrater.csv' and 'blackRhinoCrater.csv').  
 \vspace*{1\baselineskip}
 2. What is the minimum and maximum population size for lions?  
 \vspace*{1\baselineskip}
